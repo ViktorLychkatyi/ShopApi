@@ -1,0 +1,33 @@
+@ShopApp_HostAddress = http://localhost:5228
+
+GET {{ShopApp_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+GET {{ShopApp_HostAddress}}/api/product/1
+
+###
+GET {{ShopApp_HostAddress}}/api/product/2
+
+###
+POST {{ShopApp_HostAddress}}/api/product
+Content-Type: application/json
+
+{
+  "Title": "Milk",
+  "Price": 60.90
+}
+
+
+###
+POST {{ShopApp_HostAddress}}/api/category
+Content-Type: application/json
+
+{
+  "Title": "Phone",
+  "Description": "none",
+  "Image": "none",
+  "CreatedAt": "none",
+  "UpdateddAt": "none",
+  "isShow": true
+}
