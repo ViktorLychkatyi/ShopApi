@@ -37,7 +37,7 @@
   },
   {
     "ContainingType": "ShopApp.Controllers.CategoryController",
-    "Method": "GetProductById",
+    "Method": "GetCategoryById",
     "RelativePath": "api/Category/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -135,6 +135,59 @@
         "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShopApp.Controllers.ProductController",
+    "Method": "UpdateProductById",
+    "RelativePath": "api/Product/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "newProduct",
+        "Type": "ShopDomain.Models.Product",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShopApp.Controllers.ProductController",
+    "Method": "DeleteProductById",
+    "RelativePath": "api/Product/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShopApp.Controllers.ProductController",
+    "Method": "SearchItem",
+    "RelativePath": "api/Product/search",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "title",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

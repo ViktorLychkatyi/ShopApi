@@ -1,11 +1,3 @@
-G:\tasks\ShopApi\ShopApp\obj\Debug\net10.0\ShopApp.csproj.AssemblyReference.cache
-G:\tasks\ShopApi\ShopApp\obj\Debug\net10.0\rpswa.dswa.cache.json
-G:\tasks\ShopApi\ShopApp\obj\Debug\net10.0\ShopApp.GeneratedMSBuildEditorConfig.editorconfig
-G:\tasks\ShopApi\ShopApp\obj\Debug\net10.0\ShopApp.AssemblyInfoInputs.cache
-G:\tasks\ShopApi\ShopApp\obj\Debug\net10.0\ShopApp.AssemblyInfo.cs
-G:\tasks\ShopApi\ShopApp\obj\Debug\net10.0\ShopApp.csproj.CoreCompileInputs.cache
-G:\tasks\ShopApi\ShopApp\obj\Debug\net10.0\ShopApp.MvcApplicationPartsAssemblyInfo.cs
-G:\tasks\ShopApi\ShopApp\obj\Debug\net10.0\ShopApp.MvcApplicationPartsAssemblyInfo.cache
 G:\tasks\ShopApi\ShopApp\bin\Debug\net10.0\appsettings.Development.json
 G:\tasks\ShopApi\ShopApp\bin\Debug\net10.0\appsettings.json
 G:\tasks\ShopApi\ShopApp\bin\Debug\net10.0\ShopApp.staticwebassets.endpoints.json
@@ -18,6 +10,15 @@ G:\tasks\ShopApi\ShopApp\bin\Debug\net10.0\Microsoft.AspNetCore.OpenApi.dll
 G:\tasks\ShopApi\ShopApp\bin\Debug\net10.0\Microsoft.OpenApi.dll
 G:\tasks\ShopApi\ShopApp\bin\Debug\net10.0\ShopDomain.dll
 G:\tasks\ShopApi\ShopApp\bin\Debug\net10.0\ShopDomain.pdb
+G:\tasks\ShopApi\ShopApp\obj\Debug\net10.0\ShopApp.csproj.AssemblyReference.cache
+G:\tasks\ShopApi\ShopApp\obj\Debug\net10.0\rpswa.dswa.cache.json
+G:\tasks\ShopApi\ShopApp\obj\Debug\net10.0\ShopApp.GeneratedMSBuildEditorConfig.editorconfig
+G:\tasks\ShopApi\ShopApp\obj\Debug\net10.0\ShopApp.AssemblyInfoInputs.cache
+G:\tasks\ShopApi\ShopApp\obj\Debug\net10.0\ShopApp.AssemblyInfo.cs
+G:\tasks\ShopApi\ShopApp\obj\Debug\net10.0\ShopApp.csproj.CoreCompileInputs.cache
+G:\tasks\ShopApi\ShopApp\obj\Debug\net10.0\ShopApp.MvcApplicationPartsAssemblyInfo.cs
+G:\tasks\ShopApi\ShopApp\obj\Debug\net10.0\ShopApp.MvcApplicationPartsAssemblyInfo.cache
+G:\tasks\ShopApi\ShopApp\obj\Debug\net10.0\ShopApp.sourcelink.json
 G:\tasks\ShopApi\ShopApp\obj\Debug\net10.0\rjimswa.dswa.cache.json
 G:\tasks\ShopApi\ShopApp\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
 G:\tasks\ShopApi\ShopApp\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json

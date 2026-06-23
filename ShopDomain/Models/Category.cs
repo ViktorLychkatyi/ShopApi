@@ -12,6 +12,6 @@ namespace ShopDomain.Models
         public string? Image { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdateddAt { get; set; }
-        public bool isShow { get; set; }
+        public bool IsShow { get; set; }
     }
 }

@@ -1,38 +1,32 @@
 
 using ShopApp.Interfaces;
+using ShopApp.Middelwares;
 using ShopApp.Services;
 
 namespace ShopApp
 {
+    public static class MiddlewareExtensions
+    {
+        public static IApplicationBuilder UseRequestTimer(this IApplicationBuilder builder)
+        {
+            return builder.UseMiddleware<RequestTimerMiddleware>();
+        }
+    }
+
     public class Program
     {
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
-
             builder.Services.AddControllers();
-            //builder.Services.AddScoped<IProductService, ProductService>();
-            builder.Services.AddScoped<ICategoryService, CategoryService>();
-
-            // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-            //builder.Services.AddOpenApi();
+            builder.Services.AddSingleton<IProductService, ProductService>();
+            builder.Services.AddSingleton<ICategoryService, CategoryService>();
 
             var app = builder.Build();
-
-            // Configure the HTTP request pipeline.
-            //if (app.Environment.IsDevelopment())
-            //{
-            //    app.MapOpenApi();
-            //}
-
-            //app.UseHttpsRedirection();
-
-            //app.UseAuthorization();
-
  
             app.MapControllers();
+            app.UseRequestTimer();
 
             app.Run();
         }
