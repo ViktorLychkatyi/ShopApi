@@ -35,3 +35,4 @@ G:\tasks\ShopApi\ShopApp\obj\Debug\net10.0\refint\ShopApp.dll
 G:\tasks\ShopApi\ShopApp\obj\Debug\net10.0\ShopApp.pdb
 G:\tasks\ShopApi\ShopApp\obj\Debug\net10.0\ShopApp.genruntimeconfig.cache
 G:\tasks\ShopApi\ShopApp\obj\Debug\net10.0\ref\ShopApp.dll
+G:\tasks\ShopApi\ShopApp\bin\Debug\net10.0\ShopApp.staticwebassets.runtime.json

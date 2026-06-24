@@ -1,17 +1,18 @@
 
 using ShopApp.Interfaces;
 using ShopApp.Middelwares;
+using ShopApp.Middlewares;
 using ShopApp.Services;
 
 namespace ShopApp
 {
-    public static class MiddlewareExtensions
+    /*public static class MiddlewareExtensions
     {
         public static IApplicationBuilder UseRequestTimer(this IApplicationBuilder builder)
         {
             return builder.UseMiddleware<RequestTimerMiddleware>();
         }
-    }
+    }*/
 
     public class Program
     {
@@ -26,7 +27,8 @@ namespace ShopApp
             var app = builder.Build();
  
             app.MapControllers();
-            app.UseRequestTimer();
+            app.UseStaticFiles();
+            app.UseMiddleware<UserCheckMiddleware>();
 
             app.Run();
         }

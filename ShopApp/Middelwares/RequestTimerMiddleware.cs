@@ -16,6 +16,20 @@
             // 3. Код ПІСЛЯ того, як відпрацював контролер
             watch.Stop();
             _logger.LogInformation("Запит завершено за {Ms} мс", watch.ElapsedMilliseconds);
+
+            context.Response.StatusCode = 404;
+
+            context.Response.ContentType = "application/json";
+
+            var response = new
+            {
+                message = "Error"
+            };
+
+
+            await context.Response.WriteAsJsonAsync(response);
+
+            return;
         }
     }
 }

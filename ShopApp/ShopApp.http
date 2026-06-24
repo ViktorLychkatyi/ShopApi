@@ -46,3 +46,14 @@ Content-Type: application/json
   "UpdateddAt": "none",
   "isShow": true
 }
+
+###
+POST {{ShopApp_HostAddress}}/api/user/register
+Content-Type: application/json
+
+{
+  "Id": 1,
+  "Login": "hh",
+  "HashPassword": "kk",
+  "Email": "kk@mail.com"
+}

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Shop.App.Filters;
 using ShopApp.Interfaces;
 using ShopDomain.Models;
 //using ShopApp.Services;
@@ -11,6 +12,7 @@ namespace ShopApp.Controllers
 
     [ApiController]
     [Route("api/[controller]")]
+    [LogActionFilter]
     public class ProductController(IProductService _productService) : ControllerBase
     {
         //private readonly IProductService _productService;
@@ -54,7 +56,7 @@ namespace ShopApp.Controllers
 
             _productService.AddProduct(product);
 
-            return Created($"/api/items/{product.Id}", product);
+            return Created($"/api/products/{product.Id}", product);
         }
 
         [HttpPut("{id}")]

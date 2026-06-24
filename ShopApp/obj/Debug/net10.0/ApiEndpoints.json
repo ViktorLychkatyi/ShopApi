@@ -191,5 +191,21 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShopApp.Controllers.UserController",
+    "Method": "Register",
+    "RelativePath": "api/user/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "ShopDomain.Models.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]
