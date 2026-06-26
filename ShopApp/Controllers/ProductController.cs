@@ -6,28 +6,22 @@ using ShopDomain.Models;
 
 namespace ShopApp.Controllers
 {
-    // http://localhost:port/api/product
-    // http://localhost:port/product
-
-
     [ApiController]
     [Route("api/[controller]")]
     [LogActionFilter]
     public class ProductController(IProductService _productService) : ControllerBase
     {
-        //private readonly IProductService _productService;
-
-        //public ProductController(IProductService productService)
-        //{
-        //    _productService = productService;
-        //}
-
         [HttpGet]
         public List<Product> GetProducts()
         {
             return _productService.GetAllProducts();
         }
 
+        /// <summary>
+        /// Получить товар по идентификатору.
+        /// </summary>
+        /// <param name="id">Идентификатор товара.</param>
+        /// <returns>Объект товара.</returns>
         [HttpGet("{id}")]
         public IActionResult GetProductById([FromRoute] int id)
         {
@@ -39,7 +33,7 @@ namespace ShopApp.Controllers
             if (string.IsNullOrWhiteSpace(product.Title))
                 return BadRequest("Product null");
 
-            _productService.MarkAsViewed(id);
+            //_productService.MarkAsViewed(id);
 
             return Ok(product);
         }

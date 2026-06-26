@@ -10,6 +10,6 @@ namespace ShopApp.Interfaces
         Product? UpdateProduct(int id, Product newProduct);
         void DeleteProduct(int id);
         Product? SearchProduct(string? title);
-        void MarkAsViewed(int id);
+        //void MarkAsViewed(int id);
     }
 }

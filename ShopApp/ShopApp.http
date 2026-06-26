@@ -4,7 +4,7 @@
 GET {{ShopApp_HostAddress}}/api/product/
 
 ###
-GET {{ShopApp_HostAddress}}/api/product/4
+GET {{ShopApp_HostAddress}}/api/product/5
 
 ###
 GET {{ShopApp_HostAddress}}/api/product/search

@@ -38,15 +38,15 @@ namespace ShopApp.Services
 
         public Product? GetProduct(int id)
         {
-            return _products.FirstOrDefault(p => p.Id == id && !p.IsViewed);
+            return _products.FirstOrDefault(p => p.Id == id);
         }
 
-        public void MarkAsViewed(int id)
-        {
-            var product = _products.FirstOrDefault(p => p.Id == id);
-            if (product != null)
-                product.IsViewed = true;
-        }
+        //public void MarkAsViewed(int id)
+        //{
+        //    var product = _products.FirstOrDefault(p => p.Id == id);
+        //    if (product != null)
+        //        product.IsViewed = true;
+        //}
 
         public void AddProduct(Product product)
         {

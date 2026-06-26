@@ -36,3 +36,8 @@ G:\tasks\ShopApi\ShopApp\obj\Debug\net10.0\ShopApp.pdb
 G:\tasks\ShopApi\ShopApp\obj\Debug\net10.0\ShopApp.genruntimeconfig.cache
 G:\tasks\ShopApi\ShopApp\obj\Debug\net10.0\ref\ShopApp.dll
 G:\tasks\ShopApi\ShopApp\bin\Debug\net10.0\ShopApp.staticwebassets.runtime.json
+G:\tasks\ShopApi\ShopApp\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
+G:\tasks\ShopApi\ShopApp\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+G:\tasks\ShopApi\ShopApp\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+G:\tasks\ShopApi\ShopApp\bin\Debug\net10.0\ShopApp.xml
+G:\tasks\ShopApi\ShopApp\obj\Debug\net10.0\ShopApp.xml
