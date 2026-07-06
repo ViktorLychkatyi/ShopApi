@@ -1,24 +1,56 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ShopApi.Requests.Categories;
+using ShopApi.Services;
 using ShopApplication.DTOs;
 using ShopApplication.DTOs.Category;
 using ShopApplication.DTOs.CategoryDTOs;
 using ShopApplication.Interfaces;
+using ShopApplication.Interfaces.Services;
 using ShopApplication.Services;
 using ShopDomain.Models;
-using ShopApplication.Interfaces.Services;
+using ShopApi.Interfaces;
 
 namespace ShopApi.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
-    public class CategoryController(ICategoryService _categoryService) : ControllerBase
+    public class CategoryController(ICategoryService _categoryService, IImageService _imageService, IConfiguration _configuration) : ControllerBase
     {
+
         [HttpPost]
-        public async Task<IActionResult> CreateCategory([FromBody] CategoryCreateDTO dto)
+        public async Task<IActionResult> CreateCategory([FromForm] CategoryCreateRequest dto)
         {
-            int? id = await _categoryService.CreateCategoryAsync(dto);
+            if (dto.Image != null)
+            {
+                dto.Url = (await _imageService.SaveFileAsync(dto.Image, _configuration["DirnameForFiles:Categories"])) ?? string.Empty;
+            }
+
+            var createDto = new CategoryCreateDTO
+            {
+                Name = dto.Name,
+                Url = dto.Url,
+                Slug = dto.Slug,
+                ParentId = dto.ParentId == 0 ? null : dto.ParentId,
+            };
+
+
+            var id = await _categoryService.CreateCategoryAsync(createDto);
+
             return Ok($"Category created {id}");
+            //return CreatedAtAction(nameof(GetCategoryById),
+            //        // назва методу new { id },              
+            //        // параметри маршруту new { id });             
+            //        // тіло відповіді
         }
+
+        //[HttpPost]
+        //public async Task<IActionResult> CreateCategory([FromForm] CategoryCreateRequest dto) //FromBody
+        //{
+        //    int? id = await _categoryService.CreateCategoryAsync(dto);
+        //    return Ok($"Category created {id}");
+
+
+        //}
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetCategoryById([FromRoute] int id)

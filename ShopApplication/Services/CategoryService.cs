@@ -53,6 +53,7 @@ public class CategoryService(ICategoryRepository _repository) : ICategoryService
             Id = category.Id,
             Name = category.Name,
             Slug = category.Slug,
+            Url = category.Url = string.IsNullOrEmpty(category.Url) ? "" : category.Url,
             ParentId = category.ParentId
         };
     }

@@ -1,13 +1,15 @@
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi;
+using ShopApi.Interfaces;
+using ShopApi.Services;
 using ShopApplication.Interfaces;
-using ShopApplication.Interfaces.Services;
 using ShopApplication.Interfaces.Repository;
+using ShopApplication.Interfaces.Services;
+using ShopApplication.Services;
 using ShopInfrastructure.Data;
 using ShopInfrastructure.Repositories;
 using System.Reflection;
-using ShopApplication.Services;
 
 namespace ShopApi
 {
@@ -63,6 +65,7 @@ namespace ShopApi
 
             builder.Services.AddScoped<IProductRepository, ProductRepository>();
             builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+            builder.Services.AddScoped<IImageService, ImageService>();
 
             //----
 

@@ -1,3 +1,6 @@
+wwwroot\categories\9be54eff-83e7-40d8-b1f7-9ce9ebe592b3.jpg
+wwwroot\categories\d0750bfb-f4d6-4191-9f49-3ac40488d1d9.jpg
+wwwroot\categories\d1b4f928-9069-46ff-ae13-d2fcb824a8e1.jpg
 wwwroot\images\beauty.jpg
 wwwroot\images\default-avatar.png
 wwwroot\images\electronics.jpg
