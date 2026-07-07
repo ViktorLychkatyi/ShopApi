@@ -12,5 +12,6 @@ namespace ShopApplication.Interfaces.Repository
         Task<Product?> GetProductAsync(int id);
         Task<bool> EditProductAsync(Product product);
         Task<int?> RemoveProductAsync(int id);
+        void RemoveImages(ICollection<ProductImage> images);
     }
 }

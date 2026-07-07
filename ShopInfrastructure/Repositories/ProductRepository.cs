@@ -53,5 +53,10 @@ namespace ShopInfrastructure.Repositories
             await _context.SaveChangesAsync();
             return id;
         }
+
+        public void RemoveImages(ICollection<ProductImage> images)
+        {
+            _context.ProductImages.RemoveRange(images);
+        }
     }
 }

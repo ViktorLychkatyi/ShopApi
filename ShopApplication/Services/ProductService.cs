@@ -12,16 +12,6 @@ namespace ShopApplication.Services
 {
     public class ProductService(IProductRepository _repository) : IProductService
     {
-        //public async Task<int?> CreateProductAsync(ProductCreateDTO dto)
-        //{
-        //    return await _repository.AddProductAsync(new Product()
-        //    {
-        //        Name = dto.Name,
-        //        Price = dto.Price,
-        //        CategoryId = dto.CategoryId == 0 ? null : dto.CategoryId
-        //    }); 
-        //}
-
         public async Task<int?> CreateProductAsync(ProductCreateDTO dto)
         {
             var product = new Product()
@@ -84,21 +74,6 @@ namespace ShopApplication.Services
 
         public async Task<bool> UpdateProductAsync(ProductUpdateDTO dto)
         {
-            //var product = await _repository.GetProductAsync(dto.Id);
-
-            //if (product == null)
-            //    return false;
-
-            //product.Name = dto.Name;
-            //product.Price = dto.Price;
-            //product.StockQty = dto.StockQty;
-            //product.ImageUrls = product.Images
-            //    .Select(img => img.Url)
-            //    .ToList();
-            //product.CategoryId = dto.CategoryId;
-
-            //return await _repository.EditProductAsync(product);
-
             var product = await _repository.GetProductAsync(dto.Id);
 
             if (product == null)
@@ -107,16 +82,28 @@ namespace ShopApplication.Services
             product.Name = dto.Name;
             product.Price = dto.Price;
             product.StockQty = dto.StockQty;
-            product.CategoryId = dto.CategoryId;
+            _ = product.CategoryId == 0 ? null : dto.CategoryId;
 
-
-            foreach (var url in dto.ImageUrls)
+            if (dto.ImageUrls.Any())
             {
-                product.Images.Add(new ProductImage
+                if (dto.ImageUrls == null)
                 {
-                    Url = url,
-                    ProductId = product.Id
-                });
+                    //Console.WriteLine("-");
+                }    
+                else
+                {
+                    _repository.RemoveImages(product.Images);
+                    product.Images.Clear();
+
+                    foreach (var url in dto.ImageUrls)
+                    {
+                        product.Images.Add(new ProductImage
+                        {
+                            Url = url,
+                            ProductId = product.Id
+                        });
+                    }
+                }
             }
 
 

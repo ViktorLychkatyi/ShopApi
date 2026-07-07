@@ -172,7 +172,7 @@ namespace ShopInfrastructure.Migrations
                     b.HasOne("ShopDomain.Models.Category", "Category")
                         .WithMany("Products")
                         .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("Category");
                 });

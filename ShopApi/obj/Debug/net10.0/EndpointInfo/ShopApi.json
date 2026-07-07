@@ -341,6 +341,13 @@
               "schema": {
                 "type": "object",
                 "properties": {
+                  "Images": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  },
                   "Id": {
                     "type": "integer",
                     "format": "int32"
@@ -369,6 +376,9 @@
                 }
               },
               "encoding": {
+                "Images": {
+                  "style": "form"
+                },
                 "Id": {
                   "style": "form"
                 },

@@ -1,13 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using ShopApi.Requests.Products;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
 using ShopApi.Filters;
 using ShopApi.Interfaces;
+using ShopApi.Requests.Products;
 using ShopApplication.DTOs.CategoryDTOs;
 using ShopApplication.DTOs.Product;
 using ShopApplication.Interfaces.Services;
 using ShopApplication.Services;
 using ShopDomain.Models;
-using Microsoft.AspNetCore.Http;
 
 namespace ShopApi.Controllers
 {
@@ -21,9 +22,7 @@ namespace ShopApi.Controllers
             var maxImages = _configuration.GetValue<int>("FileSettings:MaxProductImages");
 
             if (dto.Images.Count > maxImages)
-            {
                 return BadRequest($"You can upload up to {maxImages} images.");
-            }
 
             var createDto = new ProductCreateDTO
             {
@@ -39,14 +38,12 @@ namespace ShopApi.Controllers
                 var imageUrl = await _imageService.SaveFileAsync(image, _configuration["DirnameForFiles:Products"]);
 
                 if (!string.IsNullOrEmpty(imageUrl))
-                {
                     createDto.ImageUrls.Add(imageUrl);
-                }
             }
 
             var id = await _productService.CreateProductAsync(createDto);
 
-            return Ok(id);
+            return Ok($"Product created {id}");
         }
 
         [HttpGet("{id}")]
@@ -68,13 +65,36 @@ namespace ShopApi.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateProductById(int id, [FromForm] ProductUpdateDTO dto)
+        public async Task<IActionResult> UpdateProductById(int id, [FromForm] ProductUpdateRequest dto)
         {
             var product = await _productService.UpdateProductAsync(dto);
+            var maxImages = _configuration.GetValue<int>("FileSettings:MaxProductImages");
 
-            if (product == null)
+            if (id != dto.Id)
                 return NotFound("Product not found");
 
+            if (dto.Images.Count > maxImages)
+                return BadRequest($"You can upload up to {maxImages} images.");
+
+            var updateDto = new ProductUpdateDTO
+            {
+                Id = id,
+                Name = dto.Name,
+                Price = dto.Price,
+                StockQty = dto.StockQty,
+                CategoryId = dto.CategoryId == 0 ? null : dto.CategoryId,
+                ImageUrls = new List<string>()
+            };
+
+            foreach (var image in dto.Images)
+            {
+                var imageUrl = await _imageService.SaveFileAsync(image, _configuration["DirnameForFiles:Products"]);
+
+                if (!string.IsNullOrEmpty(imageUrl))
+                    updateDto.ImageUrls.Add(imageUrl);
+            }
+
+            var result = await _productService.UpdateProductAsync(updateDto);
             return Ok("Product updated");
         }
 
