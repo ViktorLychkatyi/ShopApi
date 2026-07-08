@@ -1,7 +1,6 @@
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi;
-using ShopApi.Interfaces;
 using ShopApi.Services;
 using ShopApplication.Interfaces;
 using ShopApplication.Interfaces.Repository;

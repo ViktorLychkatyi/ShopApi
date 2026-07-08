@@ -1,6 +1,9 @@
-﻿using ShopApplication.DTOs.Category;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using ShopApplication.DTOs.Category;
 using ShopApplication.DTOs.CategoryDTOs;
 using ShopApplication.DTOs.Product;
+using ShopApplication.Interfaces;
 using ShopApplication.Interfaces.Repository;
 using ShopApplication.Interfaces.Services;
 using ShopDomain.Models;
@@ -10,20 +13,23 @@ using System.Text;
 
 namespace ShopApplication.Services
 {
-    public class ProductService(IProductRepository _repository) : IProductService
+    public class ProductService(IProductRepository _repository, IImageService _imageService) : IProductService
     {
         public async Task<int?> CreateProductAsync(ProductCreateDTO dto)
         {
             var product = new Product()
             {
                 Name = dto.Name,
-                Price = dto.Price,
+                Price = dto.Price,  
                 StockQty = dto.StockQty,
                 CategoryId = dto.CategoryId,
-                Images = dto.ImageUrls.Select(url => new ProductImage
+                Images = dto.ImageUrls
+                .Select((url, index) => new ProductImage
                 {
-                    Url = url
-                }).ToList()
+                    Url = url,
+                    IsPrimary = index == 0
+                })
+                .ToList()
             };
 
             return await _repository.AddProductAsync(product);
@@ -84,28 +90,26 @@ namespace ShopApplication.Services
             product.StockQty = dto.StockQty;
             _ = product.CategoryId == 0 ? null : dto.CategoryId;
 
-            if (dto.ImageUrls.Any())
+            if (dto.ImageUrls?.Any() == true)
             {
-                if (dto.ImageUrls == null)
-                {
-                    //Console.WriteLine("-");
-                }    
-                else
-                {
-                    _repository.RemoveImages(product.Images);
-                    product.Images.Clear();
+                var oldImages = product.Images.ToList();
 
-                    foreach (var url in dto.ImageUrls)
-                    {
-                        product.Images.Add(new ProductImage
-                        {
-                            Url = url,
-                            ProductId = product.Id
-                        });
-                    }
+                foreach (var image in oldImages)
+                {
+                    _imageService.DeleteFile(image.Url, "products");
                 }
-            }
 
+                _repository.RemoveImages(oldImages);
+
+                product.Images = dto.ImageUrls
+                    .Select((url, index) => new ProductImage
+                    {
+                        Url = url,
+                        ProductId = product.Id,
+                        IsPrimary = index == 0
+                    })
+                    .ToList();
+            }
 
             return await _repository.EditProductAsync(product);
         }

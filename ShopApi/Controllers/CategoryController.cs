@@ -8,7 +8,6 @@ using ShopApplication.Interfaces;
 using ShopApplication.Interfaces.Services;
 using ShopApplication.Services;
 using ShopDomain.Models;
-using ShopApi.Interfaces;
 
 namespace ShopApi.Controllers
 {
@@ -38,15 +37,6 @@ namespace ShopApi.Controllers
 
             return Ok($"Category created {id}");
         }
-
-        //[HttpPost]
-        //public async Task<IActionResult> CreateCategory([FromForm] CategoryCreateRequest dto) //FromBody
-        //{
-        //    int? id = await _categoryService.CreateCategoryAsync(dto);
-        //    return Ok($"Category created {id}");
-
-
-        //}
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetCategoryById([FromRoute] int id)

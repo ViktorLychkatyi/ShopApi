@@ -2,10 +2,10 @@
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using ShopApi.Filters;
-using ShopApi.Interfaces;
 using ShopApi.Requests.Products;
 using ShopApplication.DTOs.CategoryDTOs;
 using ShopApplication.DTOs.Product;
+using ShopApplication.Interfaces;
 using ShopApplication.Interfaces.Services;
 using ShopApplication.Services;
 using ShopDomain.Models;

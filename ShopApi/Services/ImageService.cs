@@ -1,5 +1,5 @@
 ﻿
-using ShopApi.Interfaces;
+using ShopApplication.Interfaces;
 
 namespace ShopApi.Services
 {
@@ -19,8 +19,19 @@ namespace ShopApi.Services
 
             await using var stream = new FileStream(filePath, FileMode.Create);
             await file.CopyToAsync(stream);
+            stream.Dispose();
+
+            Console.WriteLine(filePath);
 
             return fileName;
+        }
+
+        public void DeleteFile(string file, string path)
+        {
+            var filePath = Path.Combine(_environment.WebRootPath, path, file);
+
+            if (File.Exists(filePath))
+                File.Delete(filePath);
         }
     }
 }
