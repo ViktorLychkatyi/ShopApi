@@ -20,6 +20,12 @@ namespace ShopApi.Controllers
         public async Task<IActionResult> CreateProduct([FromForm] ProductCreateRequest dto)
         {
             var maxImages = _configuration.GetValue<int>("FileSettings:MaxProductImages");
+            var maxSizeMb = _configuration.GetValue<int>("FileSettings:MaxFileSizeMb");
+            var maxSizeBytes = maxSizeMb * 1024 * 1024;
+
+            var allowedExtensions = _configuration
+                .GetSection("FileSettings:AllowedExtensions")
+                .Get<string[]>();
 
             if (dto.Images.Count > maxImages)
                 return BadRequest($"You can upload up to {maxImages} images.");
@@ -35,7 +41,15 @@ namespace ShopApi.Controllers
 
             foreach (var image in dto.Images)
             {
+                var extension = Path.GetExtension(image.FileName).ToLower();
+
+                if (!allowedExtensions.Contains(extension))
+                    return BadRequest("Invalid file type.");
+
                 var imageUrl = await _imageService.SaveFileAsync(image, _configuration["DirnameForFiles:Products"]);
+
+                if (image.Length > maxSizeBytes)
+                    return BadRequest($"Maximum file size is {maxSizeMb} MB.");
 
                 if (!string.IsNullOrEmpty(imageUrl))
                     createDto.ImageUrls.Add(imageUrl);
@@ -68,7 +82,14 @@ namespace ShopApi.Controllers
         public async Task<IActionResult> UpdateProductById(int id, [FromForm] ProductUpdateRequest dto)
         {
             var product = await _productService.UpdateProductAsync(dto);
+
             var maxImages = _configuration.GetValue<int>("FileSettings:MaxProductImages");
+            var maxSizeMb = _configuration.GetValue<int>("FileSettings:MaxFileSizeMb");
+            var maxSizeBytes = maxSizeMb * 1024 * 1024;
+
+            var allowedExtensions = _configuration
+                .GetSection("FileSettings:AllowedExtensions")
+                .Get<string[]>();
 
             if (id != dto.Id)
                 return NotFound("Product not found");
@@ -88,7 +109,15 @@ namespace ShopApi.Controllers
 
             foreach (var image in dto.Images)
             {
+                var extension = Path.GetExtension(image.FileName).ToLower();
+
+                if (!allowedExtensions.Contains(extension))
+                    return BadRequest("Invalid file type.");
+
                 var imageUrl = await _imageService.SaveFileAsync(image, _configuration["DirnameForFiles:Products"]);
+
+                if (image.Length > maxSizeBytes)
+                    return BadRequest($"Maximum file size is {maxSizeMb} MB.");
 
                 if (!string.IsNullOrEmpty(imageUrl))
                     updateDto.ImageUrls.Add(imageUrl);
