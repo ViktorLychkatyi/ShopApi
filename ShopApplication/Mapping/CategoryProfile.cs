@@ -12,14 +12,14 @@ namespace ShopApplication.Mapping
     {
         public CategoryProfile()
         {
-            CreateMap<CategoryCreate, Category>();
+            CreateMap<CategoryCreateDTO, Category>();
 
-            CreateMap<Category, CategoryRead>()
+            CreateMap<Category, CategoryReadDTO>()
                 .ForMember(
                 dest => dest.Products, 
                 opt => opt.MapFrom(src => src.Products.Select(p => p.Id).ToList()));
 
-            CreateMap<CategoryUpdate, Category>();
+            CreateMap<CategoryUpdateDTO, Category>();
         }
     }
 }

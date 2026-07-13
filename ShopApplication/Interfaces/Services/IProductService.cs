@@ -9,10 +9,10 @@ namespace ShopApplication.Interfaces.Services
 {
     public interface IProductService
     {
-        Task<int?> CreateProductAsync(ProductCreate dto);
-        Task<ICollection<ProductRead>> GetAllProductsAsync();
-        Task<ProductRead?> GetProductByIdAsync(int id);
-        Task<bool> UpdateProductAsync(ProductUpdate dto);
+        Task<int?> CreateProductAsync(ProductCreateDTO dto);
+        Task<ICollection<ProductReadDTO>> GetAllProductsAsync();
+        Task<ProductReadDTO?> GetProductByIdAsync(int id);
+        Task<bool> UpdateProductAsync(ProductUpdateDTO dto);
         Task<int?> DeleteProductAsync(int id);
     }
 }

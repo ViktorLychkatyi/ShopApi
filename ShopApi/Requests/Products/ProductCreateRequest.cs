@@ -2,7 +2,7 @@
 
 namespace ShopApi.Requests.Products
 {
-    public class ProductCreateRequest : ProductCreate
+    public class ProductCreateRequest : ProductCreateDTO
     {
         public List<IFormFile?> Images { get; set; }
     }

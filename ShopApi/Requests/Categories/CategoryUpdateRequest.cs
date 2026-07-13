@@ -2,7 +2,7 @@
 
 namespace ShopApi.Requests.Categories
 {
-    public class CategoryUpdateRequest : CategoryUpdate
+    public class CategoryUpdateRequest : CategoryUpdateDTO
     {
         public IFormFile? Image { get; set; }
     }

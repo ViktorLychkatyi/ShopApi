@@ -1,16 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "G:\\tasks\\ShopApi\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|g:\\tasks\\shopapi\\shopapplication\\dtos\\productdtos\\productupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|solutionrelative:shopapplication\\dtos\\productdtos\\productupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|g:\\tasks\\shopapi\\shopapplication\\dtos\\categorydtos\\categoryupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17A0DC46-AC3D-4D78-81CA-D98E879D4C3F}|ShopApplication\\ShopApplication.csproj|solutionrelative:shopapplication\\dtos\\categorydtos\\categoryupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,34 +9,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 195,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProductUpdate.cs",
-              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApplication\\DTOs\\ProductDTOs\\ProductUpdate.cs",
-              "RelativeDocumentMoniker": "ShopApplication\\DTOs\\ProductDTOs\\ProductUpdate.cs",
-              "ToolTip": "G:\\tasks\\ShopApi\\ShopApplication\\DTOs\\ProductDTOs\\ProductUpdate.cs",
-              "RelativeToolTip": "ShopApplication\\DTOs\\ProductDTOs\\ProductUpdate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-13T19:04:59.851Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CategoryUpdate.cs",
-              "DocumentMoniker": "G:\\tasks\\ShopApi\\ShopApplication\\DTOs\\CategoryDTOs\\CategoryUpdate.cs",
-              "RelativeDocumentMoniker": "ShopApplication\\DTOs\\CategoryDTOs\\CategoryUpdate.cs",
-              "ToolTip": "G:\\tasks\\ShopApi\\ShopApplication\\DTOs\\CategoryDTOs\\CategoryUpdate.cs",
-              "RelativeToolTip": "ShopApplication\\DTOs\\CategoryDTOs\\CategoryUpdate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-13T19:04:25.236Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"

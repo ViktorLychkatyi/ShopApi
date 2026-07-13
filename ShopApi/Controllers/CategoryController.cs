@@ -33,7 +33,7 @@ namespace ShopApi.Controllers
             if (dto.Image.Length > maxSizeBytes)
                 return BadRequest($"Maximum file size is {maxSizeMb} MB.");
 
-            var createDto = new CategoryCreate
+            var createDto = new CategoryCreateDTO
             {
                 Name = dto.Name,
                 Url = dto.Url,
@@ -106,7 +106,7 @@ namespace ShopApi.Controllers
 
             dto.Url = await _imageService.SaveFileAsync(dto.Image, _configuration["DirnameForFiles:Categories"]);
 
-            var updateDto = new CategoryUpdate
+            var updateDto = new CategoryUpdateDTO
             {
                 Id = id,
                 Name = dto.Name,

@@ -8,13 +8,13 @@ namespace ShopApplication.Interfaces.Services
 {
     public interface ICategoryService
     {
-        Task<int?> CreateCategoryAsync(CategoryCreate dto);
-        Task<ICollection<CategoryRead>> GetAllCategoriesAsync();
-        Task<CategoryRead?> GetCategoryByIdAsync(int id);
-        Task<bool> UpdateCategoryAsync(CategoryUpdate dto);
+        Task<int?> CreateCategoryAsync(CategoryCreateDTO dto);
+        Task<ICollection<CategoryReadDTO>> GetAllCategoriesAsync();
+        Task<CategoryReadDTO?> GetCategoryByIdAsync(int id);
+        Task<bool> UpdateCategoryAsync(CategoryUpdateDTO dto);
         Task<int?> DeleteCategoryAsync(int id);
-        Task<ICollection<CategoryRead>> GetCategoriesByParentAsync();
-        Task<ICollection<CategoryRead>> GetCategoriesByChildAsync();
-        Task<ICollection<CategoryRead>> GetCategoriesByTreeAsync();
+        Task<ICollection<CategoryReadDTO>> GetCategoriesByParentAsync();
+        Task<ICollection<CategoryReadDTO>> GetCategoriesByChildAsync();
+        Task<ICollection<CategoryReadDTO>> GetCategoriesByTreeAsync();
     }
 }
