@@ -53,6 +53,22 @@
   },
   {
     "ContainingType": "ShopApi.Controllers.AuthController",
+    "Method": "LoginUser",
+    "RelativePath": "api/v1/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "ShopApplication.DTOs.UserDTOs.UserLoginDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShopApi.Controllers.AuthController",
     "Method": "RegisterUser",
     "RelativePath": "api/v1/Auth/register",
     "HttpMethod": "POST",

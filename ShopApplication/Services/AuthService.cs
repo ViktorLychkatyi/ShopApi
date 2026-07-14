@@ -28,5 +28,20 @@ namespace ShopApplication.Services
             }
             return (null, null);
         }
+
+        public async Task<(UserReadDTO? User, string? Token)> LoginAsync(string email, string password)
+        {
+            var user = await _repository.GetUserByEmailAsync(email);
+            if (user != null)
+            {
+                var isPasswordValid = _hashHelper.IsValidPassword(password, user.PasswordHash);
+                if (isPasswordValid)
+                {
+                    var token = _jwtService.GenerateAccessToken(_mapper.Map<UserLoginDTO>(user), user.Role.ToString());
+                    return (_mapper.Map<UserReadDTO>(user), token);
+                }
+            }
+            return (null, null);
+        }
     }
 }

@@ -24,12 +24,11 @@ namespace ShopInfrastructure.Repositories
             await _context.Users.AddAsync(user);
             await _context.SaveChangesAsync();
             return await _context.Users.FirstOrDefaultAsync(us => (us.Email == user.Email && us.PasswordHash == user.PasswordHash));
-            /*
-             1) Перевірити чи немає вже у БД такого email
-             2) Захешувати пароль
-             3) Додати користувача у БД
-             4) Зробити токен, скоріше за все не тут будемо робити
-             */
+        }
+
+        public async Task<User?> GetUserByEmailAsync(string email)
+        {
+            return await _context.Users.FirstOrDefaultAsync(user => user.Email == email);
         }
     }
 }
