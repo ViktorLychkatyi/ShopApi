@@ -16,6 +16,7 @@ namespace ShopInfrastructure.Data
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
 
 
         //// Автоматично встановлює CreatedAt і UpdatedAt перед збереженням
@@ -75,7 +76,7 @@ namespace ShopInfrastructure.Data
                 entity.HasOne(p => p.Category)
                       .WithMany(c => c.Products)
                       .HasForeignKey(p => p.CategoryId)
-                      .OnDelete(DeleteBehavior.Restrict); //забороняємо видалення;
+                      .OnDelete(DeleteBehavior.Restrict);
 
                 modelBuilder.Entity<ProductImage>(entity =>
                 {
@@ -84,6 +85,14 @@ namespace ShopInfrastructure.Data
                           .HasForeignKey(i => i.ProductId)
                           .OnDelete(DeleteBehavior.Cascade);
                 });
+            });
+
+            modelBuilder.Entity<RefreshToken>(entity =>
+            {
+                entity.HasOne(rt => rt.User)
+                      .WithMany(u => u.RefreshTokens)
+                      .HasForeignKey(rt => rt.UserId)
+                      .OnDelete(DeleteBehavior.Cascade);
             });
         }
     }

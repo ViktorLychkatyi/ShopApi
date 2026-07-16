@@ -69,6 +69,22 @@
   },
   {
     "ContainingType": "ShopApi.Controllers.AuthController",
+    "Method": "RefreshToken",
+    "RelativePath": "api/v1/Auth/refresh",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "refreshToken",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShopApi.Controllers.AuthController",
     "Method": "RegisterUser",
     "RelativePath": "api/v1/Auth/register",
     "HttpMethod": "POST",

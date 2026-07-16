@@ -91,6 +91,8 @@ namespace ShopApi
             //    options.IncludeXmlComments(xmlPath);
             //});
 
+
+
             // Swagger + JWT
             builder.Services.AddSwaggerGen(options =>
             {
@@ -153,6 +155,7 @@ namespace ShopApi
             builder.Services.AddScoped<IProductRepository, ProductRepository>();
             builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
             builder.Services.AddScoped<IAuthRepository, AuthRepository>();
+            builder.Services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
 
             // HELPERS
             builder.Services.AddSingleton<IHashHelper, HashHelper>();
@@ -163,6 +166,7 @@ namespace ShopApi
 
             app.UseSwagger();
             app.UseSwaggerUI();
+
             app.UseCors("AllowAll");
 
             if (app.Environment.IsDevelopment())

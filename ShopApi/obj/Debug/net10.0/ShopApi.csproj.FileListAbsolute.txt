@@ -16,9 +16,12 @@ G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\ShopApi.runtimeconfig.json
 G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\ShopApi.dll
 G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\ShopApi.pdb
 G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\ShopApi.xml
+G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\AutoMapper.dll
 G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\Azure.Core.dll
 G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\Azure.Identity.dll
+G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\BCrypt-Net-Next.dll
 G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\Humanizer.dll
+G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\Microsoft.AspNetCore.OpenApi.dll
 G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\Microsoft.Bcl.AsyncInterfaces.dll
 G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\Microsoft.Bcl.Cryptography.dll
@@ -169,7 +172,3 @@ G:\tasks\ShopApi\ShopApi\obj\Debug\net10.0\ShopApi.xml
 G:\tasks\ShopApi\ShopApi\obj\Debug\net10.0\ShopApi.pdb
 G:\tasks\ShopApi\ShopApi\obj\Debug\net10.0\ShopApi.genruntimeconfig.cache
 G:\tasks\ShopApi\ShopApi\obj\Debug\net10.0\ref\ShopApi.dll
-G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\AutoMapper.dll
-G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\BCrypt-Net-Next.dll
-G:\tasks\ShopApi\ShopApi\obj\Debug\net10.0\ShopApi.MvcApplicationPartsAssemblyInfo.cs
-G:\tasks\ShopApi\ShopApi\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
