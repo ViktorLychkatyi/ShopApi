@@ -91,8 +91,6 @@ namespace ShopApi
             //    options.IncludeXmlComments(xmlPath);
             //});
 
-
-
             // Swagger + JWT
             builder.Services.AddSwaggerGen(options =>
             {
