@@ -1,5 +1,6 @@
 wwwroot\categories\03a6cd16-fe2b-4f44-b25a-ccc976b0fb46.jpg
 wwwroot\categories\156b1eb0-59fd-4611-aa08-f8159f448e50.jpg
+wwwroot\categories\166f0a10-a131-4427-bd03-79f3d97cae6e.jpg
 wwwroot\categories\1eb593a8-4fb7-4972-b7c9-e84ecda1677f.jpg
 wwwroot\categories\2b0f79a0-2744-488d-ac47-9dbd55154152.jpg
 wwwroot\categories\32861ab4-8f85-48b2-9be8-2f917088bb79.jpg
@@ -7,6 +8,7 @@ wwwroot\categories\3be25239-f55b-4fe5-ac0c-e4b105f83db7.jpg
 wwwroot\categories\4b3b859c-3234-4797-9e1b-a4d48b4a5cad.jpg
 wwwroot\categories\4d41192a-ff08-45ac-a678-044b39c44c71.jpg
 wwwroot\categories\52b1202d-c18c-4286-a317-9e51e053be1e.jpg
+wwwroot\categories\56807c98-2e01-4014-a441-9c304331cd21.jpg
 wwwroot\categories\6097436c-e3e9-4f87-82c3-ce12023c22ea.jpg
 wwwroot\categories\66c4421d-421a-49f1-b41f-cdf62a92eb4a.jpg
 wwwroot\categories\7b94a629-0763-43a7-9d5a-b3894f75381f.jpg
@@ -16,6 +18,7 @@ wwwroot\categories\8b83942d-ac9e-400a-8389-6547d3e3f476.jpg
 wwwroot\categories\91572998-5560-4407-85dd-cb3c22e29a00.jpg
 wwwroot\categories\9afb25cc-b485-4225-a99c-444268e8f31a.jpg
 wwwroot\categories\9be54eff-83e7-40d8-b1f7-9ce9ebe592b3.jpg
+wwwroot\categories\9e6f6ae3-a688-41d0-aec6-d780391481d2.jpg
 wwwroot\categories\a76f8735-d7f2-40eb-9592-8c97ccc8b455.jpg
 wwwroot\categories\bbfd51f4-64dc-4b37-a7b0-95d333365380.jpg
 wwwroot\categories\beee37bc-ddec-4c5e-9699-55947487bb1c.jpg
@@ -26,6 +29,8 @@ wwwroot\categories\ce90b075-99c8-47a7-ae16-044ba6071aa3.jpg
 wwwroot\categories\d0750bfb-f4d6-4191-9f49-3ac40488d1d9.jpg
 wwwroot\categories\d1b4f928-9069-46ff-ae13-d2fcb824a8e1.jpg
 wwwroot\categories\d851fed2-458b-4fd1-b2cf-9b757fd38591.jpg
+wwwroot\categories\d9a14a79-6946-4050-8d94-308e569e5738.jpg
+wwwroot\categories\e0049a0d-c0b4-4c84-ad00-f89878754e1d.jpg
 wwwroot\categories\f2bdb70b-1fd3-47c8-9045-1f651f389723.jpg
 wwwroot\categories\fe706c7f-05cf-48b7-8b38-31164d0792be.jpg
 wwwroot\images\beauty.jpg
@@ -34,6 +39,7 @@ wwwroot\images\default-image.png
 wwwroot\images\electronics.jpg
 wwwroot\images\fashion.jpg
 wwwroot\images\home.jpg
+wwwroot\products\038743be-c7eb-448a-be97-8b9cedb72ea1.jpg
 wwwroot\products\07011048-1865-476f-a979-71afd78fb428.jpg
 wwwroot\products\09a19993-d3da-4bfd-8e24-c50185275977.jpeg
 wwwroot\products\19085f27-d5e2-481e-9123-78a6a669314b.jpg
@@ -44,6 +50,7 @@ wwwroot\products\264c6d88-6862-4b61-99cb-d3b6f9ccdfc8.jpeg
 wwwroot\products\294d0617-34d0-4a7e-8fb5-9b1bc78c74ca.jpg
 wwwroot\products\2e0325f2-f889-49d7-8026-ecf792e3d22d.jpg
 wwwroot\products\30fe6f37-8408-4f1e-a28f-90fc877ea548.jpg
+wwwroot\products\35c24c6e-4b94-4b52-8182-bd0e03810ff9.jpg
 wwwroot\products\383e49a8-3e2e-47bf-b632-5d534e003ce0.jpg
 wwwroot\products\3d3ebd99-853e-4d04-a0ae-66b383c64855.jpg
 wwwroot\products\47ac9392-48c2-4817-9384-07d5a070cbf5.jpg
@@ -59,6 +66,7 @@ wwwroot\products\7bc53ca8-ce21-4631-9226-0fc37ab41f7d.jpg
 wwwroot\products\82c768a4-68f3-4365-bbdb-12754894c04b.jpg
 wwwroot\products\879d719a-ae94-4fb6-946d-5c2f7eded0c6.jpg
 wwwroot\products\94db2edd-37f8-4208-8e3f-ab0ec4e8caa2.jpg
+wwwroot\products\95c022d1-9d13-4a02-a6af-cb12f77b0fe4.jpg
 wwwroot\products\a544f835-ad3c-47bf-8eef-e50c09fe5c19.jpg
 wwwroot\products\a97fb472-d4ca-4a93-941f-9bbb6af15dd1.jpg
 wwwroot\products\ac988688-6d18-43e5-9dad-2375ca057e4d.jpg
@@ -72,7 +80,10 @@ wwwroot\products\dd0a4747-b771-4757-9385-2e3ed22a6022.jpg
 wwwroot\products\dd3e8cc3-92c6-4b99-bc1e-5e07f6f507c1.jpg
 wwwroot\products\e70ca46e-40ec-4e36-bb89-bb9521ffbce9.jpg
 wwwroot\products\e994b15d-226f-4768-b8d8-2add5f74ac99.jpeg
+wwwroot\products\ef0d0762-c2bf-4fb1-bd34-0b919d4c9a00.jpg
 wwwroot\products\efec2af6-ad9c-469f-b558-43872c8f7ffb.jpg
 wwwroot\products\f6311e71-7c7c-4ba3-84ca-71cbfd6bd9b4.jpg
+wwwroot\products\fa84bd31-d247-44b7-89da-153c892bfee8.jpg
 wwwroot\products\fb5b6abe-b1ac-4bc6-af06-ad81d493656c.jpg
 wwwroot\products\fc017889-0dc6-4cb2-a77b-29f5890ca61c.jpg
+wwwroot\products\fd63de99-9553-4ef6-857d-e9b0128ab197.jpg
